@@ -7,12 +7,6 @@ function atualizarContagem() {
     const diferenca = dataAlvo - agora;
 
 
-    const audio = new Audio("15_Batista de Melo.mp3");
-        audio.loop = true;
-
-    document.addEventListener("click", () => {
-        audio.play();
-    }, { once: true }); // dispara só uma vez
 
     if (diferenca <= 0) {
 
