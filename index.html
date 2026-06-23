@@ -16,8 +16,8 @@
             cursor: pointer;
             border: none;
             border-radius: 8px;
-            background-color: #28a745;
-            color: white;
+            background-color: #FFFFFF;
+            color: black;
         }
 
         #btnIniciar:hover {
@@ -43,7 +43,7 @@
     </div>
 
     <!-- BOTÃO ABAIXO DAS IMAGENS -->
-    <button id="btnIniciar">▶ Iniciar Música</button>
+    <button id="btnIniciar">▶ Iniciar </button>
 
     <!-- CONTADOR -->
     <div id="contador">
@@ -71,8 +71,7 @@
 
         btnIniciar.addEventListener('click', () => {
             musica.play();
-            btnIniciar.textContent = '🎵 Música Tocando';
-            btnIniciar.disabled = true;
+            
         });
     </script>
 
