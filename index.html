@@ -1,54 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-BR">    
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DK-2 Tormenta</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #btnIniciar {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #28a745;
+            color: white;
+        }
+
+        #btnIniciar:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
 
-    <audio id="bgMusic" autoplay loop>
-        <source src="15_Batista de Melo.mp3" type="audio/mpeg">
+    <!-- Áudio -->
+    <audio id="bgMusic" loop>
+        <source src="https://raw.githubusercontent.com/augusto-arth/contadordk2/main/15_Batista%20de%20Melo.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
     </audio>
-    
+
     <div class="container">
-
-       
-
         <h1>DK-2 Tormenta</h1>
 
         <div class="imagens">
             <img src="davy-jones.jpg" alt="Imagem 1">
             <img src="mickey.gif" alt="Imagem 2">
         </div>
-
     </div>
 
+    <!-- BOTÃO ABAIXO DAS IMAGENS -->
+    <button id="btnIniciar">▶ Iniciar Música</button>
+
+    <!-- CONTADOR -->
     <div id="contador">
         <div class="tempo">
             <span id="dias">0</span>
             <label>Dias</label>
         </div>
-
         <div class="tempo">
             <span id="horas">0</span>
             <label>Horas</label>
         </div>
-
         <div class="tempo">
             <span id="minutos">0</span>
             <label>Minutos</label>
         </div>
-
         <div class="tempo">
             <span id="segundos">0</span>
             <label>Segundos</label>
         </div>
     </div>
 
+    <script>
+        const btnIniciar = document.getElementById('btnIniciar');
+        const musica = document.getElementById('bgMusic');
+
+        btnIniciar.addEventListener('click', () => {
+            musica.play();
+            btnIniciar.textContent = '🎵 Música Tocando';
+            btnIniciar.disabled = true;
+        });
+    </script>
+
     <script src="script.js"></script>
 
 </body>
-
 </html>
