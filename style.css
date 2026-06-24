@@ -47,6 +47,29 @@ h1{
     box-shadow:0 0 25px rgba(255,255,255,0.25);
 }
 
+.imagens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Logo central sem “moldura branca” */
+.logo-central {
+    display: block;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    max-width: 250px; /* ajuste se quiser */
+}
+
+/* GIFs laterais */
+.gif-lado,
+.gif-direito {
+    max-width: 120px;
+    height: auto;
+}
+
 #contador{
     width:100%;
     display:flex;
